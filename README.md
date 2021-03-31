@@ -22,7 +22,7 @@
 │   │   └── global.go #golang 公用全域變數pkg入口
 │   └── web/ #golang web服務核心pkg
 │       ├── encrypt/ #golang 加密核心模組pkg
-│       ├── web_fileupload.go
+│       ├── web_fileupload.go #golang web服務檔案上傳(接口)
 │       ├── web_handle.go #golang web服務handle(接口)
 │       └── web_template.go #golang web服務模版輸出
 │ 

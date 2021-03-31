@@ -11,7 +11,7 @@
 ├── internal/ #golang main() 私有pkg 
 │   ├── antifood/ #golang 防food模組pkg
 │   └── system/ #golang OS系統設置模組pkg
-├── pkg/
+├── pkg/ #golang main() 公有pkg 
 │   ├── common/ #golang 常用函式pkg
 │   │   ├── common.go #golang 常用函式pkg入口
 │   │   └── fileInfo #golang 檔案資訊模組pkg

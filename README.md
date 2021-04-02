@@ -10,8 +10,8 @@ cpu_core=0
 host_scheme=http://
 host_domain_name=localhost
 host_port=8080
-google_oauth2_clientID=1234567890.apps.googleusercontent.com
-google_oauth2_secret_code=_XXXXX
+google_oauth2_clientID=3205468xxxxxx-xxxx.apps.googleusercontent.com
+google_oauth2_secret_code=_chaXXXXX
 google_oauth2_callback_path=callback
 
 #新增白名單Gmail帳號

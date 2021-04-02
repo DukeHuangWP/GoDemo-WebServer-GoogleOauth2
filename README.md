@@ -22,9 +22,9 @@ add_google_email=XXXXXXXX2@gmail.com
 ## Google憑證申請說明
 
 請至 https://console.cloud.google.com/apis/credentials
-![Alt text](./docs/Demo_sequence_diagram.svg)
-## 接口服務使用時序圖說明
 ![Alt text](./docs/Google_setup_credentials.png)
+## 接口服務使用時序圖說明
+![Alt text](./docs/Demo_sequence_diagram.svg)
 ## 檔案樹說明
 ```bash
 ├── build/ #專案執行檔放置處(包括環境設定檔、網頁版模)

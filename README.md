@@ -1,8 +1,30 @@
 ## 前言
  WebServer＋GoogleOauth2
 
-## 接口服務使用時序圖說明
+## 環境變數說明
+```bash
+#cpu執行核心數設置
+cpu_core=0
+
+#設置頁面https://console.cloud.google.com/apis/credentials
+host_scheme=http://
+host_domain_name=localhost
+host_port=8080
+google_oauth2_clientID=1234567890.apps.googleusercontent.com
+google_oauth2_secret_code=_XXXXX
+google_oauth2_callback_path=callback
+
+#新增白名單Gmail帳號
+add_google_email=XXXXXXXX1@gmail.com
+add_google_email=XXXXXXXX2@gmail.com
+```
+
+## Google憑證申請說明
+
+請至 https://console.cloud.google.com/apis/credentials
 ![Alt text](./docs/Demo_sequence_diagram.svg)
+## 接口服務使用時序圖說明
+![Alt text](./docs/Google_setup_credentials.png)
 ## 檔案樹說明
 ```bash
 ├── build/ #專案執行檔放置處(包括環境設定檔、網頁版模)
@@ -10,6 +32,7 @@
 │   ├── script.sh #自訂執行伺服器.sh腳本
 │   └── webstie.conf #環境變數設定檔
 ├── deploy/ #容器化專案所需檔案放置處,如:docker-compose.yml
+├── docs/ #專案文檔放置處
 ├── internal/ #golang main() 私有pkg 
 │   ├── antifood/ #golang 防food模組pkg
 │   └── system/ #golang OS系統設置模組pkg

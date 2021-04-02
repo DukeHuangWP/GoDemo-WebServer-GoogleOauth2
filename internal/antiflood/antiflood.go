@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-var antFlood_Count uint8 = 30           //短時間連線次數上限
+var antFlood_Count uint8 = 3           //短時間連線次數上限
 var antFlood_BetSecs int64 = 5          //短時間連線秒數計算
 var antFlood_TimerClearSecs int64 = 600 //多久後解封ClientIP時間
 var antFlood_TimerBetSecs int = 1800    //ClientIP監控執行周期
@@ -66,6 +66,7 @@ func TriggerHandler(ginCTX *gin.Context) {
 		if antFlood_ClientIPs[vs_ClientIP].ConnectCount > antFlood_Count {
 
 			ginCTX.Writer.WriteString(banPageHTML)
+			//ginCTX.Writer.WriteHeader(http.StatusGatewayTimeout) //回復timeout
 			ginCTX.Abort()
 			return
 		}

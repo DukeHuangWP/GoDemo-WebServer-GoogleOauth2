@@ -13,7 +13,7 @@ import (
 const (
 	ConfigFilePath = "./configs/webstie.conf" //環境變數設定檔
 
-	WebURLRoot           = "minecraft" //網頁根目錄 http://localhost:8080/xxx
+	WebURLRoot           = "websrv" //網頁根目錄 http://localhost:8080/xxx
 	FolderPath_Public    = "./website" //網頁公用檔案目錄
 	FolderPath_Images    = "images"    //網頁公用目錄名稱 - 圖片
 	FolderPath_Pages     = "pages"     //網頁公用目錄名稱 - 純html頁面

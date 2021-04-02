@@ -70,8 +70,11 @@ add_google_email=XXXXXXXX2@gmail.com
 
 
 ## 執行方式
+
 1.申請並設置完google憑證
+
 2.設置環境變數
+
 3.執行專案
 ```bash
 go run main.go

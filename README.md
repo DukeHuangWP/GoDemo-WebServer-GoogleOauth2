@@ -7,7 +7,7 @@
 ```bash
 ├── build/ #專案執行檔放置處(包括環境設定檔、網頁版模)
 ├── configs/ #專案執行相關設定檔
-│   ├── restart_script.sh #重啟minecraft伺服器.sh腳本
+│   ├── script.sh #自訂執行伺服器.sh腳本
 │   └── webstie.conf #環境變數設定檔
 ├── deploy/ #容器化專案所需檔案放置處,如:docker-compose.yml
 ├── internal/ #golang main() 私有pkg 

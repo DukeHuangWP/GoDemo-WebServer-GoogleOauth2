@@ -3,7 +3,7 @@
 
 ## 環境變數說明
 ```bash
-#cpu執行核心數設置
+#cpu執行核心數設置 0=全部核心
 cpu_core=0
 
 #設置頁面https://console.cloud.google.com/apis/credentials
@@ -66,6 +66,15 @@ add_google_email=XXXXXXXX2@gmail.com
     ├── templates/ #網頁公用靜態資源 -版模
     └── uploads/ #上傳檔案放置處
 
+```
+
+
+## 執行方式
+1.申請並設置完google憑證
+2.設置環境變數
+3.執行專案
+```bash
+go run main
 ```
 
 ## URN Path說明

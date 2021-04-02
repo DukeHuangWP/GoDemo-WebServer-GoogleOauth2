@@ -74,7 +74,7 @@ add_google_email=XXXXXXXX2@gmail.com
 2.設置環境變數
 3.執行專案
 ```bash
-go run main
+go run main.go
 ```
 
 ## URN Path說明

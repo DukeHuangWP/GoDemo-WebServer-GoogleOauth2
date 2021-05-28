@@ -93,9 +93,15 @@ func (cfgs *CfgType) ReadFile(configPath string, isInit bool) {
 	for index, value := range SettingMap { //若環境變數無此值則使用預設值
 		if value.IsWritten == false {
 			if err := value.ToDefault(); err != nil {
-				log.Printf("環境設定值錯誤警告: %v 中並未發現'%v', 將使用預設值' %v=%v '代替.", configPath, index, index, value.DefaultValue)
+				log.Printf("環境設定值錯誤警告: %v 中並未發現'%v', 在設置預設值'%v=%v'發生錯誤'%v', 煩檢查設定值.", configPath, index, index, value.DefaultValue, err)
 			} else {
-				log.Printf("環境設定值錯誤警告: %v 中並未發現'%v', 且預設值' %v=%v ' 設置發生錯誤", configPath, index, index, value.DefaultValue)
+				log.Printf("環境設定值錯誤警告: %v 中並未發現'%v', 將使用預設值'%v=%v'代替.", configPath, index, index, value.DefaultValue)
+				if isInit {
+					os.Exit(Code_error_exit)
+				}
+			}
+		}
+	}
 				// if isInit {
 				// 	os.Exit(Code_error_exit)
 				// }
